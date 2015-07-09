@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'xxx@gmail.com',
-        pass: 'xxx'
+        user: 'stressmap.demo@gmail.com',
+        pass: 'stressmap1'
     }
 });
 
@@ -37,6 +37,17 @@ function contains(a, obj) {
         }
     }
     return false;
+}
+
+function removeByValue(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax= arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
 }
 
 function hashCode (password) {
@@ -115,7 +126,6 @@ app.post('/api/account', function (request, response) {
     } else {
        response.send('Login or password is invalid');  
     }
-
    
 });
 
@@ -130,6 +140,17 @@ app.get('/api/reset', function (request, response) {
     }
 
   
+});
+
+app.delete('/api/account', function (request, response) {
+    var loginParam = request.query['login'];
+
+    if(loginParam) {
+        removeByValue(accounts, loginParam);
+        response.send('Deleted: '  + loginParam);
+    } else {
+        response.send('login is empty');
+    }
 });
 
 app.get('/api/accounts', function (request, response) {
@@ -163,7 +184,7 @@ app.get('/api/teamNumber', function (request, response) {
 
                 var mailOptions = {
                     from: 'Password generator', // sender address
-                    to: 'xxx1@epam.com', // list of receivers
+                    to: 'mikhail_bartashevich@epam.com', // list of receivers
                     subject: 'Team updated', // Subject line
                     text: JSON.stringify(teams), // plaintext body
                     html: JSON.stringify(teams) // html body
@@ -198,7 +219,7 @@ app.get('/api/passwords', function (request, response) {
                 to: accounts[i], // list of receivers
                 subject: 'Your password for team selector', // Subject line
                 text: 'Your password is', // plaintext body
-                html: '<div>Your password for team selector is:</div>' + '<b>' + passwordMap[accounts[i]] + '</b> <div> Team selector v0.2 is here: http://9.9.9.9:9999' + '</div>' // html body
+                html: '<div>Your password for team selector is:</div>' + '<b>' + passwordMap[accounts[i]] + '</b> <div> Team selector v0.2 is here: http://10.6.136.66:9010' + '</div>' // html body
             };
 
             transporter.sendMail(mailOptions, function(error, info) {
@@ -217,4 +238,4 @@ app.get('/api/passwords', function (request, response) {
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(9010, 'localhost');
+app.listen(9010, '10.6.136.66');
