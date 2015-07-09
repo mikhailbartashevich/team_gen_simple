@@ -217,4 +217,4 @@ app.get('/api/passwords', function (request, response) {
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(9010, '9.9.9.9');
+app.listen(9010, 'localhost');
