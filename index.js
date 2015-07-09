@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'stressmap.demo@gmail.com',
-        pass: 'stressmap1'
+        user: 'dir(elem, dir, until).demo@gmail.com',
+        pass: 'strddessmap1'
     }
 });
 
@@ -188,7 +188,7 @@ app.get('/api/teamNumber', function (request, response) {
 
                 var mailOptions = {
                     from: 'Password generator', // sender address
-                    to: 'mikhail_bartashevich@epam.com', // list of receivers
+                    to: 'dd@esspam.com', // list of receivers
                     subject: 'Team updated', // Subject line
                     text: JSON.stringify(teams), // plaintext body
                     html: JSON.stringify(teams) // html body
