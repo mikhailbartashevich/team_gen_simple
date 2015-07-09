@@ -147,7 +147,17 @@ app.delete('/api/account', function (request, response) {
 
     if(loginParam) {
         removeByValue(accounts, loginParam);
+
+        if( contains(teams[0], loginParam) ) {
+            removeByValue(teams[0], loginParam);
+        }
+
+        if( contains(teams[1], loginParam) ) {
+            removeByValue(teams[1], loginParam);
+        }
+
         response.send('Deleted: '  + loginParam);
+
     } else {
         response.send('login is empty');
     }
