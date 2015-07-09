@@ -1,0 +1,6 @@
+.git
+.tmp
+.bundle
+node_modules
+/public/js/bower_components
+.DS_Store

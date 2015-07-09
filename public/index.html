@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+	<head>
+
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+		<title>Team generator</title>
+
+		<meta name="description" content=""/>
+		<meta name="viewport" content="width=device-width"/>
+
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	</head>
+	<body>
+
+		<div class="main-block">
+
+			<h2 class="header">Team Selector</h2>
+			<br><br>
+
+			<div class="login-block">
+				I am:
+				<select id="login" name="login">
+				</select>
+
+				<input id="password" type="password" name="password" value="" placeholder="Password">
+				
+				<div class="matches-holder">
+					<div class="container">
+
+						<div id="match0" class="match">
+							<div class="fire-match-head">@</div>
+							<div class="fire-match"></div>
+						</div>
+							
+						<div id="match1" class="match">
+							<div class="fire-match-head">@</div>
+							<div class="fire-match"></div>
+						</div>
+
+						<div class="plane">
+							<div class="palm"></div>
+						</div>
+
+					</div>
+				</div>
+
+				<div><input type="button" id="export" name="" value="Export to File"></div>
+
+				<div class="resset-results"><input type="password" id="admin-pass" name="" value="" placeholder="Admin Password"> <input type="button" id="reset" name="" value="Reset results"></div>
+
+				<div id="feedback" style="color:red"></div>
+			</div>
+
+			<div class="team-table">
+				<table style="border: 1px solid red;">
+					<caption class="table-caption">Team 0</caption>
+					<tbody id="tbody0">
+
+						<tr><td>Batman</td></tr>
+						
+					</tbody>
+				</table>
+			</div>
+			<br><br>
+
+			<div class="team-table">
+				<table style="border: 1px solid green;">
+					<caption class="table-caption">Team 1</caption>
+					
+					<tbody id="tbody1">
+						<tr><td>Superman</td></tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+		<script src="js/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="js/fileGenerator.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>

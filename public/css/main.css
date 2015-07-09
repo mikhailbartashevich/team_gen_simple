@@ -1,0 +1,134 @@
+.header {
+	margin: 0 auto; 
+	width: 200px; 
+	text-align:center;
+}
+
+.team-table {
+	max-width:400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.team-table table {
+	width: 400px;
+}
+
+.table-caption {
+	width:400px;
+}
+
+.login-block {
+	max-width:400px;
+	margin: 0 auto;
+	text-align: center
+}
+
+.main-block {
+	margin: 100px auto;
+	width: 600px;
+	border: 1px gray solid;
+	padding : 20px;
+}
+
+.matches-holder {
+	width: 300px;
+	height: 200px;
+	margin: 10px auto;
+	border: 1px gray solid;
+}
+
+.fire-match {
+	margin: -2px 5px 5px;
+	height: 90px;
+	width: 5px;
+	background-color: orange;
+	border: 1px gray solid;
+}
+
+.fire-match-head {
+	color: brown;
+	background-color: brown;
+	width: 16px;
+	height: 23px;
+	border-radius: 50%;
+}
+
+.fire-match:hover {
+	/*border: 1px red solid;*/
+}
+
+.fire-match-head:hover {
+	border: 1px red solid;
+}
+
+.right : {
+	float:rigtht;
+}
+
+.container {
+	width: 200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.match {
+	cursor: pointer;
+	display: inline-block;
+	margin: 40px 8px;
+	width: 18px;
+}
+
+.plane {
+	position: absolute;
+	bottom: 20px;
+	width: 200px;
+	height : 100px;
+	z-index: 5;
+	background-color: white;
+}
+
+.plane .palm {
+   	background-image: url('/img/palm.jpg');
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 105px;
+	margin: 0 35px;
+
+}
+
+.hidden {
+	display: none;
+}
+
+.short-match {
+	height: 70px
+}
+
+#feedback {
+	margin: 5px;
+}
+
+.fire {
+	
+    animation: 1.5s linear 0s alternate none infinite running burn;
+}
+
+@keyframes burn {
+	0% {
+	    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85, -0.2em -0.2em 0.4em #ffae34, 0.2em -0.3em 0.3em #ec760c, -0.2em -0.4em 0.4em #cd4606, 0.1em -0.5em 0.7em #973716, 0.1em -0.7em 0.7em #451b0e;
+	}
+	45% {
+	    text-shadow: 0.1em -0.2em 0.5em #fefcc9, 0.15em 0 0.4em #feec85, -0.1em -0.25em 0.5em #ffae34, 0.15em -0.45em 0.5em #ec760c, -0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716, 0.2em -0.1em 0.8em #451b0e;
+	}
+	70% {
+	    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85, -0.2em -0.2em 0.6em #ffae34, 0.2em -0.3em 0.4em #ec760c, -0.2em -0.4em 0.7em #cd4606, 0.1em -0.5em 0.7em #973716, 0.1em -0.7em 0.9em #451b0e;
+	}
+	100% {
+	    text-shadow: -0.1em -0.2em 0.6em #fefcc9, -0.15em 0 0.6em #feec85, 0.1em -0.25em 0.6em #ffae34, -0.15em -0.45em 0.5em #ec760c, 0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716, -0.2em -1em 0.8em #451b0e;
+	}
+}
+
+.resset-results {
+	margin: 10px;
+}
